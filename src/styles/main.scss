@@ -1,0 +1,302 @@
+$column-gap: 0px;
+
+@import "~bulma/bulma.sass";
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
+
+
+.cf, .cf2, .cf3 {
+  position:absolute;
+  height:281px;
+  width:450px;
+  margin:0 auto;
+}
+
+.cf img {
+  position:absolute;
+  left:40%;
+  transition: opacity 1s ease-in-out;
+}
+
+.cf2 img {
+  position:absolute;
+  right:-250%;
+  top: 240%;
+  transition: opacity 1s ease-in-out;
+}
+
+.cf3 img {
+  position:absolute;
+  right:-220%;
+  top: 30%;
+  transition: opacity 1s ease-in-out;
+}
+
+.cf4 img {
+  position:absolute;
+  left: 20%;
+  top: 70%;
+  transition: opacity 1s ease-in-out;
+}
+
+@keyframes cfFadeInOut {
+0% {
+  opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+
+// .cf img.top, .cf2 img.top, .cf3 img.top, .cf4 img.top {
+// animation-name: cfFadeInOut;
+// animation-timing-function: ease-in-out;
+// animation-iteration-count: infinite;
+// animation-duration: 5s;
+// animation-direction: alternate;
+// }
+
+// .cf2 img.top {
+//   animation-duration: 4.2s;
+// }
+// .cf3 img.top {
+//   animation-duration: 3.6s;
+// }
+
+
+
+
+
+.music-index {
+  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
+
+.back-emoji {
+  width: 50px;
+}
+
+.padd {
+  padding: 30% 0 0 10%;
+
+  img {
+    width: 40px;
+    margin-left: -10px;
+    margin-top: 10px;
+  }
+
+  .img-padding {
+    width: 100px;
+    margin: 10px;
+  }
+}
+
+.apple-music {
+  display: flex;
+  align-items: center;
+
+  p {
+    margin: 10px 0 0 10px;
+    color: white;
+  }
+}
+
+.details {
+  margin-top: 10px;
+}
+
+.is-center {
+  margin: 5px auto;
+}
+
+.image-show {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.titles {
+  margin: 10px;
+}
+
+.hidden {
+  right: -500px;
+  display: none;
+}
+
+.show {
+  right: -500px;
+}
+
+.skew {
+  transform: rotateY(55deg) skew(-13deg) scale(0.95);
+  box-shadow: 4px 10px 36px -2px rgb(241, 240, 169);
+}
+
+.animateIndex {
+  transition: all 0.6s ease-in;
+}
+
+.card-styling {
+  // font-size: 5px;
+  transition: all 0.4s;
+  animation: 2.5s ease 0s 1 AlbumEnter;
+}
+
+.card-styling:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 3px 25px white;
+  cursor: pointer;
+}
+
+.navbar {
+  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
+.center-nav {
+  background: white;
+  width: 25%;
+  margin: 10px 13%;
+  margin-left: 33%;
+  color: black;
+  text-align: center;
+  padding: 5px;
+  font-size: 13px;
+  border-radius: 3px;
+}
+
+.search {
+  margin: 25% auto;
+  padding: 10px;
+}
+
+// .required {
+//   background-color: red;
+
+// }
+
+select {
+  margin: 0 25%;
+  height: 36px;
+  width: 60%;
+  border: none;
+  padding: 6px 0px;
+  appearance: none;
+
+  @media screen and (max-width: 1024px) {
+    width: 75%;
+    margin: 0 21%;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 90%;
+    margin: 0 8%;
+  }
+
+  @media screen and (max-width: 770px) {
+    height: 170px;
+    width: 50%;
+    margin: 0 25%;
+  }
+
+  option {
+    display: inline;
+    margin-right: 5%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(255, 232, 232);
+    color: rgb(110, 59, 134);
+    font-size: 16px;
+
+    @media screen and (max-width: 770px) {
+      display: block;
+    }
+  }
+}
+
+input:focus,
+select:focus,
+.form-control:focus,
+textarea:focus,
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.slidingAnimation {
+  animation: slide 1s ease;
+  animation-fill-mode: forwards;
+  background-image: linear-gradient(to right, rgba(247, 247, 247, 0), rgb(10, 10, 9));
+  right: -400px;
+}
+
+@-webkit-keyframes slide {
+  100% {
+    right: 0px;
+  }
+}
+
+@keyframes slide {
+  100% {
+    right: 0px;
+  }
+}
+
+.slidingBackAnimation {
+  animation: slideBack 1s ease;
+  animation-fill-mode: forwards;
+  background-image: linear-gradient(to right, rgba(247, 247, 247, 0), rgb(10, 10, 9));
+  right: 0px;
+}
+
+@-webkit-keyframes slideBack {
+  100% {
+    right: -1000px;
+  }
+}
+
+@keyframes slideBack {
+  100% {
+    right: -1000px;
+  }
+}
+
+.box-shadow {
+  transform: scale(1.1);
+  box-shadow: 2px 3px 25px white;
+}
+
+@keyframes AlbumEnter {
+  0% {
+    transform: translateX(-100%) scale(0.3) rotate(-90deg) scaleX(0);
+    box-shadow: none;
+    filter: opacity(0);
+  }
+  60% {
+    transform: translateX(0) scale(1) rotate(0deg);
+    box-shadow: none;
+    filter: opacity(0.6);
+  }
+  80% {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 3px white;
+    filter: opacity(1);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+    filter: opacity(1);
+  }
+}
+
+.flash {
+  box-shadow: -5px -5px 15px white;
+  transform: scale(1.05);
+}
