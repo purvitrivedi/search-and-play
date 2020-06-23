@@ -1,130 +1,237 @@
-$column-gap: 0px;
-
 @import "~bulma/bulma.sass";
 
-body {
+
+.HomePage {
+  display: flex;
   height: 100vh;
-  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  width: 100vw;
+  flex-direction: column;
+
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+
+  .background-img {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  .cf {
+    height: auto;
+    width: auto;
+    margin: 10px;
+    opacity: 0.9;
+    animation: 3s ease 0s 1 AlbumEnter2;
+
+    @media (max-width: 500px) {
+      height: 55px;
+      width: 55px;
+    }
+  }
+
+  @keyframes AlbumEnter2 {
+    0% {
+      transform: translateX(-100%) scale(0.3) rotate(-90deg) scaleX(0);
+      box-shadow: none;
+      filter: opacity(0);
+      filter: grayscale(10);
+    }
+    60% {
+      transform: translateX(0) scale(1) rotate(0deg);
+      box-shadow: none;
+      filter: opacity(0.6);
+      filter: grayscale(6);
+    }
+    80% {
+      transform: scale(1.05);
+      box-shadow: 3px 3px 3px white;
+      filter: opacity(1);
+      filter: grayscale(0);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: none;
+      filter: opacity(1);
+    }
+  }
+
+  input:focus,
+  select:focus,
+  .form-control:focus,
+  textarea:focus,
+  button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  .search-bar {
+    width: 100vw;
+    align-self: center;
+    font-family: "Overpass Mono", monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+
+    h1 {
+      color: white;
+      text-align: center;
+      margin: 10px 15px;
+      font-weight: 800;
+      font-size: 4em;
+
+      @media (max-width: 500px) {
+        font-size: 2em;
+      }
+    }
+
+    .search {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .field {
+        margin: 10px;
+        margin-bottom: 3em;
+      }
+
+      input {
+        width: 30vw;
+        font-family: "Overpass Mono", monospace;
+        border: 1px solid rgba(0, 0, 0, 0.239);
+        border-radius: 5px;
+        padding: 5px;
+        text-align: center;
+        @media (max-width: 500px) {
+          width: 70vw;
+          font-size: 11px;
+        }
+      }
+
+      select {
+        font-family: "Overpass Mono", monospace;
+        border: none;
+        background-color: transparent;
+        text-align: center;
+        color: black;
+      }
+    }
+  }
 }
 
-
-.cf, .cf2, .cf3 {
-  position:absolute;
-  height:281px;
-  width:450px;
-  margin:0 auto;
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
-
-.cf img {
-  position:absolute;
-  left:40%;
-  transition: opacity 1s ease-in-out;
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
-
-.cf2 img {
-  position:absolute;
-  right:-250%;
-  top: 240%;
-  transition: opacity 1s ease-in-out;
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
-
-.cf3 img {
-  position:absolute;
-  right:-220%;
-  top: 30%;
-  transition: opacity 1s ease-in-out;
-}
-
-.cf4 img {
-  position:absolute;
-  left: 20%;
-  top: 70%;
-  transition: opacity 1s ease-in-out;
-}
-
-@keyframes cfFadeInOut {
-0% {
-  opacity:1;
-}
-45% {
-opacity:1;
-}
-55% {
-opacity:0;
-}
-100% {
-opacity:0;
-}
-}
-
-// .cf img.top, .cf2 img.top, .cf3 img.top, .cf4 img.top {
-// animation-name: cfFadeInOut;
-// animation-timing-function: ease-in-out;
-// animation-iteration-count: infinite;
-// animation-duration: 5s;
-// animation-direction: alternate;
-// }
-
-// .cf2 img.top {
-//   animation-duration: 4.2s;
-// }
-// .cf3 img.top {
-//   animation-duration: 3.6s;
-// }
-
-
-
-
 
 .music-index {
-  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
-}
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
 
-.back-emoji {
-  width: 50px;
-}
-
-.padd {
-  padding: 30% 0 0 10%;
-
-  img {
-    width: 40px;
-    margin-left: -10px;
-    margin-top: 10px;
-  }
-
-  .img-padding {
-    width: 100px;
-    margin: 10px;
+  .back-emoji {
+    width: 50px;
   }
 }
 
-.apple-music {
+.MusicShow {
+  height: 92.5vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 
-  p {
-    margin: 10px 0 0 10px;
-    color: white;
+  .delete-button {
+    text-align: center;
+
+    @media (max-width: 800px) {
+      text-align: right;
+    }
   }
-}
 
-.details {
-  margin-top: 10px;
+  .image-show {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    img {
+      width: auto;
+      margin-right: 20px;
+    }
+
+    @media (max-width: 500px) {
+      .title,
+      .subtitle {
+        color: white;
+      }
+    }
+  }
+
+  .details {
+    margin-top: 20px;
+  }
+
+  .apple-music {
+    display: flex;
+    align-items: center;
+    margin-left: -10px;
+    p {
+      color: white;
+    }
+  }
+
+  @media (max-width: 800px) {
+    padding: 50px;
+  }
 }
 
 .is-center {
   margin: 5px auto;
 }
 
-.image-show {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.titles {
-  margin: 10px;
+.not-hidden {
+  height: 100vh;
 }
 
 .hidden {
@@ -139,14 +246,24 @@ opacity:0;
 .skew {
   transform: rotateY(55deg) skew(-13deg) scale(0.95);
   box-shadow: 4px 10px 36px -2px rgb(241, 240, 169);
+
+  @media (max-width: 800px) {
+    display: none;
+  }
+}
+
+.artworks {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .animateIndex {
   transition: all 0.6s ease-in;
+  height: 95vh;
+  overflow: scroll;
 }
 
 .card-styling {
-  // font-size: 5px;
   transition: all 0.4s;
   animation: 2.5s ease 0s 1 AlbumEnter;
 }
@@ -158,82 +275,32 @@ opacity:0;
 }
 
 .navbar {
-  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
-}
-.center-nav {
-  background: white;
-  width: 25%;
-  margin: 10px 13%;
-  margin-left: 33%;
-  color: black;
-  text-align: center;
-  padding: 5px;
-  font-size: 13px;
-  border-radius: 3px;
-}
-
-.search {
-  margin: 25% auto;
-  padding: 10px;
-}
-
-// .required {
-//   background-color: red;
-
-// }
-
-select {
-  margin: 0 25%;
-  height: 36px;
-  width: 60%;
-  border: none;
-  padding: 6px 0px;
-  appearance: none;
-
-  @media screen and (max-width: 1024px) {
-    width: 75%;
-    margin: 0 21%;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  display: flex;
+  font-family: "Overpass Mono", monospace;
+  .center-nav {
+    width: 50vw;
+    margin: 10px 25vw;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    font-size: 13px;
+    border-radius: 3px;
   }
-
-  @media screen and (max-width: 800px) {
-    width: 90%;
-    margin: 0 8%;
-  }
-
-  @media screen and (max-width: 770px) {
-    height: 170px;
-    width: 50%;
-    margin: 0 25%;
-  }
-
-  option {
-    display: inline;
-    margin-right: 5%;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: rgb(255, 232, 232);
-    color: rgb(110, 59, 134);
-    font-size: 16px;
-
-    @media screen and (max-width: 770px) {
-      display: block;
-    }
-  }
-}
-
-input:focus,
-select:focus,
-.form-control:focus,
-textarea:focus,
-button:focus {
-  outline: none !important;
-  box-shadow: none !important;
 }
 
 .slidingAnimation {
   animation: slide 1s ease;
   animation-fill-mode: forwards;
-  background-image: linear-gradient(to right, rgba(247, 247, 247, 0), rgb(10, 10, 9));
+  background-image: linear-gradient(
+    to right,
+    rgba(247, 247, 247, 0),
+    rgb(10, 10, 9)
+  );
   right: -400px;
 }
 
@@ -252,7 +319,11 @@ button:focus {
 .slidingBackAnimation {
   animation: slideBack 1s ease;
   animation-fill-mode: forwards;
-  background-image: linear-gradient(to right, rgba(247, 247, 247, 0), rgb(10, 10, 9));
+  background-image: linear-gradient(
+    to right,
+    rgba(247, 247, 247, 0),
+    rgb(10, 10, 9)
+  );
   right: 0px;
 }
 

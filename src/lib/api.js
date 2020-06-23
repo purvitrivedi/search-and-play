@@ -23,10 +23,10 @@ import axios from "axios"
 
 export const getAllSongs = (term, attribute) => {
   if (attribute === 'Any') {
-    return axios.get(`https://itunes.apple.com/search?term=${term}&media=music&entity=song&limit=200`)
+    return axios.get(`https://cors-anywhere.herokuapp.com/https://itunes.apple.com/search?term=${term}&media=music&entity=song&limit=200`)
   }
   else {
-    return axios.get(`https://itunes.apple.com/search?term=${term}&attribute=${attribute}&media=music&entity=song&limit=200`)
+    return axios.get(`https://cors-anywhere.herokuapp.com/https://itunes.apple.com/search?term=${term}&attribute=${attribute}&media=music&entity=song&limit=200`)
   }
 }
 

@@ -6,18 +6,21 @@ import FadeIn from 'react-fade-in';
 
 const MusicShow = (props) => {
   return (
-    <div className='columns'>
-      <div className="column is-three-quarters padd">
+    <div className='MusicShow'>
+      <div className="delete-button">
+        <button className="delete is-medium" onClick={props.onClick}></button>
+      </div>
+      <div>
         <FadeIn>
           <div className="image-show">
-            <img className='img-padding' src={props.artworkUrl100} alt={props.artistName} width='250' />
+            <img src={props.artworkUrl100} alt={props.artistName} width='250' />
             <div className="titles">
               <h3 className='title'>{props.artistName}</h3>
               <p className='subtitle is-center'>{props.trackCensoredName}</p>
             </div>
 
           </div>
-          <ReactAudioPlayer autoPlay controls={true} src={props.previewUrl} volume={props.volume} />
+          <ReactAudioPlayer autoPlay controls={true} src={props.previewUrl} volume={props.volume}/>
 
           <div className="details">
             <h3><strong>Album:</strong> {props.collectionName}</h3>
@@ -33,9 +36,7 @@ const MusicShow = (props) => {
 
         </FadeIn>
       </div>
-      <div className="column padd">
-        <button className="delete is-medium" onClick={props.onClick}></button>
-      </div>
+      
     </div>
   )
 }

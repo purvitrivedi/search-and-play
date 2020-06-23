@@ -33,7 +33,7 @@ class MusicIndex extends React.Component {
 
 
   flashingAlbums = () => {
-    this.setState({flashingIcon: this.state.flashingIcon + 1,})
+    this.setState({flashingIcon: this.state.flashingIcon + 1})
   }
 
   // Handle Click events on Albums - Alters the position of the index and shows the side music section
@@ -60,7 +60,6 @@ class MusicIndex extends React.Component {
   backToHomePage = () => {
     setTimeout(() => {this.props.history.push('/')}, 250)
   }
-
 
 
   render() {
@@ -100,16 +99,15 @@ class MusicIndex extends React.Component {
     return (
       <div className="music-index">
         <nav className="navbar">
-          <div className="navbar-brand">
+          <div className="navbar-back">
             <img onClick={this.backToHomePage} className="back-emoji" src="https://cdn.clipart.email/2e0429ab467af83744e6ee6d0f964a1f_left-arrow-icon-of-glyph-style-available-in-svg-png-eps-ai-_256-256.png" alt="back-arrow" />
           </div>
-          <div className="navbar-menu center-nav">{this.state.artistName}</div>
+          <div className="center-nav">{this.state.artistName}</div>
         </nav>
 
         <div className="columns">
           <div className={`container column animateIndex ${this.state.isSkewedIndex ? 'skew is-half' : 'is-full'}`}>
-            {/* <div className={`container column animateIndex ${this.state.isSkewedIndex ? '' : ''}`}> */}
-            <div className='columns is-gapless is-multiline'>
+            <div className='artworks'>
               {this.state.AllArtists.map((artist, index) => {
                 return (
                   <MusicCard key={index} {...artist} onClick={this.handleClick} onMouseEnter={this.showName} flashing={Math.random() * 200} />
@@ -117,8 +115,8 @@ class MusicIndex extends React.Component {
               })}
             </div>
           </div>
-          <div className={`container column ${this.state.isSkewedIndex ? 'slidingAnimation' : 'slidingBackAnimation'} ${this.state.isShowingArtist ? '' : 'hidden'}`}>
-            <MusicShow {...this.state.singleArtist} onClick={this.handleBackClick} volume ={this.state.volume} />
+          <div className={`container column ${this.state.isSkewedIndex ? 'slidingAnimation' : 'slidingBackAnimation'} ${this.state.isShowingArtist ? 'not-hidden' : 'hidden'}`}>
+            <MusicShow {...this.state.singleArtist} onClick={this.handleBackClick} volume={this.state.volume}/>
           </div>
         </div>
 
