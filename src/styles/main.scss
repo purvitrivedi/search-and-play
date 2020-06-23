@@ -79,16 +79,13 @@
     width: 100vw;
     align-self: center;
     font-family: "Overpass Mono", monospace;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-size: 1em;
 
     h1 {
+      width: 100vw;
       color: white;
       text-align: center;
-      margin: 10px 15px;
+      margin: 10px 0px;
       font-weight: 800;
       font-size: 4em;
 
@@ -103,12 +100,12 @@
       align-items: center;
 
       .field {
-        margin: 10px;
         margin-bottom: 3em;
       }
 
       input {
-        width: 30vw;
+        width: 30em;
+        margin-right: 15px;
         font-family: "Overpass Mono", monospace;
         border: 1px solid rgba(0, 0, 0, 0.239);
         border-radius: 5px;

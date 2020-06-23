@@ -48,11 +48,9 @@ class Home extends React.Component {
   async componentDidMount() {
     const res = await getAllSongs('indie', 'Any')
     const data = res.data.results
-    console.log(res.data.results)
+    console.log('Made by Purvi Trivedi & Rob Serowka')
     this.setState({ images: data })
     this.getRandomImage()
-    // setInterval(this.getRandomImage, 3000)
-
   }
 
 
@@ -77,9 +75,10 @@ class Home extends React.Component {
           <SearchBar requiredClass={`${this.state.validate ? '' : 'is-danger'}`} term={this.state.search.term} onKeyDown={this.submitForm} onChange={this.handleChange} onSubmit={this.handleSubmit} />
         </div>
         <div className="background-img">
-          {this.state.imgSrc.map(image => (
+          {this.state.imgSrc.map((image, index) => (
             <div 
             className="cf"
+            key={index}
             >
               <img
                 src={image}
