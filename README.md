@@ -176,8 +176,11 @@ In the last 4-5 hours we focused on adding some finishing touches such as:
 
 
 ## Wins
+
 Styling :sparkles: . Very pleased with how fun this app is, we learnt so much about animations, timers and using conditonal rendering.
+
 Teamwork :raised_hands: . This was the first time I pair-coded for almost 2 days and it was wonderful experience. Rob and I worked were always in sync and found that 
+
 <code> bouncing personal ideas off each other === better ideas </code>
 
 ## Challenges
