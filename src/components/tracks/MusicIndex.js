@@ -12,9 +12,6 @@ class MusicIndex extends React.Component {
     isShowingArtist: false,
     isSkewedIndex: false,
     artistName: '',
-    // flashingIcon1: 0,
-    // flashingIcon2: 50,
-    // flashingIcon3: 100,
     volume: 0.6
   }
 
@@ -39,7 +36,7 @@ class MusicIndex extends React.Component {
   // Handle Click events on Albums - Alters the position of the index and shows the side music section
   handleClick = (event) => {
     this.setState({ isSkewedIndex: true })
-    setTimeout(() => { this.setState({ singleArtist: event, isShowingArtist: true, volume: 0.7 }) }, 500)
+    setTimeout(() => { this.setState({ singleArtist: event, isShowingArtist: true, volume: 0.6 }) }, 500)
   }
 
 
@@ -51,6 +48,7 @@ class MusicIndex extends React.Component {
 
   // Display song name in navbar when mouse hovers
   showName = (event) => {
+    console.log(event)
     const name = `${event.artistName}: ${event.trackCensoredName}`
     this.setState({ artistName: name })
   }
