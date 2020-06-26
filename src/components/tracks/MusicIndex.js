@@ -12,9 +12,9 @@ class MusicIndex extends React.Component {
     isShowingArtist: false,
     isSkewedIndex: false,
     artistName: '',
-    flashingIcon1: 0,
-    flashingIcon2: 50,
-    flashingIcon3: 100,
+    // flashingIcon1: 0,
+    // flashingIcon2: 50,
+    // flashingIcon3: 100,
     volume: 0.6
   }
 
