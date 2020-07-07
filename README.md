@@ -48,7 +48,7 @@ The API returns 200 media (music, podcasts, videos etc.) results based on a quer
 
 We found 4 queries that we could use on our app:
 
-By default the API would give 50 results, so we added <code>limit=200</code> in the url as that is the maximum amount of results it can give us.
+By default the API would give 50 results, so we added <code>limit=200</code> in the URL as that is the maximum amount of results it can give us.
 
 <img src="src/assets/insomnia.png" alt="insomnia" />
 
@@ -62,7 +62,7 @@ By default the API would give 50 results, so we added <code>limit=200</code> in 
 
 ### Prototypes with Miro
 
-We decided to have a simple two page app: Home Page (/) & Tracks Page (/tracks). The Tracks page would show all the results as an index until a user clicked on one of them. On click, the album index will skew,make space for the track and play it.
+We decided to have a simple two-page app: Home Page (/) & Tracks Page (/tracks). The Tracks page would show all the results as an index until a user clicked on one of them. On click, the album index will skew, make space for the track and play it.
 
 <img src="src/assets/home-page-miro.png" alt="home-page" width="300" /> <img src="src/assets/album-index-miro.png" alt="album-index" width="300" /> <img src="src/assets/artist-show-miro.png" alt="artist-show" width="300" />
 
@@ -177,13 +177,17 @@ In the last 4-5 hours, we focused on adding some finishing touches:
 
 ## Wins
 
-Styling :sparkles: . Very pleased with how fun this app is, we learnt so much about animations, timers and using conditonal rendering.
+Styling :sparkles: . Very pleased with how fun this app is, we learnt so much about animations, timers and using conditional rendering.
 
 Teamwork :raised_hands: . This was the first time I pair-coded for almost 2 days and it was a wonderful experience. Rob and I were always in sync and found that bouncing personal ideas off each other always resulted in something better.
 
 ## Challenges
 
-CORS :no_entry_sign: . While were able to solve this easily after deployment, the why of it took me a while to fully understand. Our tutor was very helpful in explaining CORS in details.
+CORS :no_entry_sign: . While we were able to solve this easily after deployment, the why of it took me a while to fully understand. Our tutor was very helpful in explaining CORS in details.
+
+### Bugs
+
+Audio Volume: We set the audio volume as 0.6 as a starting point so its not too loud for the user. Due to this, it is not possible to change the volume of the track. We struggled to figure out if React Audio Player's volume can be changed through state -- so this will be a bug we need to solve in future.
 
 
 ## Key Learnings
